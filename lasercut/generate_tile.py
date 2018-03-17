@@ -2,6 +2,7 @@ from dxfwrite import DXFEngine as dxf
 from enum import Enum
 import random
 
+circle_rad=1.6
 
 class Direction(Enum):
     NORTH = 0
@@ -56,11 +57,11 @@ def tile(width, height, offsetX=0, offsetY=0, drawing=None, allNegative=False):
             entities.append(left)
             # circles
             entities.append(dxf.circle(
-                            radius=1.5,
+                            radius=circle_rad,
                             center=(px + 4, py + 4),
                             layer='engrave'))
             entities.append(dxf.circle(
-                            radius=1.5,
+                            radius=circle_rad,
                             center=(px + 28, py + 28),
                             layer='engrave'))
     for entity in entities:

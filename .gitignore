@@ -1,3 +1,4 @@
 lasercut/dxf/*
 lasercut/tmp/*
 lasercut/__pycache__/*
+*.jpg
